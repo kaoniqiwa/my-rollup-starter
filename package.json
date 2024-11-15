@@ -1,0 +1,56 @@
+{
+  "name": "@kaoniqiwa/my-rollup-starter",
+  "version": "0.0.1",
+  "description": "rollup-starter",
+  "author": "kaoniqiwa",
+  "main": "dist/how-long-till-lunch.cjs.js",
+  "module": "dist/how-long-till-lunch.esm.js",
+  "browser": "dist/how-long-till-lunch.umd.js",
+  "types": "",
+  "bin": {
+    "kaoni": "bin/cli"
+  },
+  "scripts": {
+    "dist": "npm run clean && rollup -c rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "build": "node scripts/build.mjs ",
+    "test": "node test/test.js",
+    "pretest": "npm run build",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "rollup",
+    "kaoniqiwa"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/kaoniqiwa/my-rollup-starter/#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaoniqiwa/my-rollup-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaoniqiwa/my-rollup-starter/issues"
+  },
+  "devDependencies": {
+    "@rollup/plugin-buble": "^1.0.3",
+    "@rollup/plugin-replace": "^6.0.1",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/node": "^22.9.0",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.25.0",
+    "terser": "^5.36.0",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.6.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
